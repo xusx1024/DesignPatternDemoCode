@@ -4,5 +4,5 @@
 
 - BankDemo为状态在模式之中根据判断转换
 - SwitchDemo为状态在Context中共享，以达到两个开关状态保持一致的作用
-- ScreenDemo为状态由Context控制
+- ScreenDemo为状态由Context控制，此时环境类充当了状态管理器角色
 
