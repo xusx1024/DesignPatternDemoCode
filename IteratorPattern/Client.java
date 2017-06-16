@@ -17,7 +17,8 @@ public class Client {
 		ObjectList list;
 		Iterator iterator;
 
-		list = new ProductList(products);
+//		list = new ProductList(products);
+		list = new ProductList2(products);
 		iterator = list.createIterator();
 
 		System.out.println("正向遍历：");
@@ -32,6 +33,10 @@ public class Client {
 			System.out.print(iterator.getPreviousItem() + "，");
 			iterator.previous();
 		}
+		
+		
+	 
+				
 	}
 
 }
