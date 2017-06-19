@@ -1,6 +1,6 @@
 package MementoPattern;
 
-public class ChessmanMemento {
+public class ChessmanMemento implements MementoIF {
 	private String label;
 	private int x;
 	private int y;
