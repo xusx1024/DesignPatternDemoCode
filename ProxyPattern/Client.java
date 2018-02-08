@@ -1,19 +1,15 @@
 package ProxyPattern;
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-
-public class Client implements InvocationHandler {
-
+public class Client {
 	public static void main(String[] args) {
-		Subject s = new Proxy();
-		s.operation();
-	}
+		// Subject s = new Proxy();
+		// s.operation();
 
-	@Override
-	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		Subject real = new RealSubject();
+		ProxySubject ps = new ProxySubject(real);
+		Subject sub = (Subject) java.lang.reflect.Proxy.newProxyInstance(real.getClass().getClassLoader(),
+				real.getClass().getInterfaces(), ps);
 
+		sub.operation();
+	}
 }

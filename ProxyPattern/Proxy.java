@@ -1,6 +1,13 @@
 package ProxyPattern;
 
-public class Proxy extends Subject {
+/**
+ * 静态代理
+ * 
+ * @author sxx.xu
+ *
+ */
+public class Proxy implements Subject {
+	private RealSubject rs;
 
 	@Override
 	public void operation() {
@@ -8,10 +15,7 @@ public class Proxy extends Subject {
 		preOperation();
 		rs.operation();
 		afterOperation();
-
 	}
-
-	private RealSubject rs;
 
 	private void preOperation() {
 		System.out.println("pre opreation");

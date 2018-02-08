@@ -1,6 +1,6 @@
 package ProxyPattern;
 
-public class RealSubject extends Subject {
+public class RealSubject implements Subject {
 
 	@Override
 	public void operation() {
